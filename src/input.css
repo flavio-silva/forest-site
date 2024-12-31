@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn { 
+    @apply text-black bg-gradient-to-b from-app-green-200 to-app-green-400 hover:from-lime-200 hover:to-lime-500 py-2 px-4 rounded-full flex gap-2 items-center border border-app-green-200;
+  }
+
+  .image-card {
+    @apply overflow-clip rounded-xl relative first:*:rounded-xl first:*:cursor-pointer first:*:hover:scale-110 first:*:transition last:*:invisible  last:*:hover:visible last:*:absolute last:*:bottom-4 last:*:left-4;
+  }
+
+  .subtitle {
+    @apply uppercase text-app-green-200 tracking-widest text-sm;
+
+  }
+
+  .title {
+    @apply text-6xl font-serif my-8 max-w-[800px] mx-auto font-medium text-white;
+  }
+
+  .app-gradient {
+    @apply bg-gradient-to-b from-app-green-200 to-app-green-400;
+  }
+
+  .card-info {
+    @apply grid gap-6 bg-app-green-700 p-8 rounded-xl hover:-translate-y-2 transition;
+  }
+
+  input, textarea {
+    @apply w-full py-2 rounded-md px-2 focus:outline-none focus:ring-2 ring-app-green-400 bg-app-green-600 text-white mt-1;
+  }
+}
