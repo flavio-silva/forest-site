@@ -7,17 +7,13 @@
     @apply text-black bg-gradient-to-b from-app-green-200 to-app-green-400 hover:from-lime-200 hover:to-lime-700 py-2 px-4 rounded-full flex gap-2 items-center border border-app-green-200;
   }
 
-  .image-card {
-    @apply overflow-clip rounded-xl relative first:*:rounded-xl first:*:cursor-pointer first:*:hover:scale-110 first:*:transition last:*:invisible  last:*:hover:visible last:*:absolute last:*:bottom-4 last:*:left-4;
-  }
-
   .subtitle {
     @apply uppercase text-app-green-200 tracking-widest text-sm;
 
   }
 
   .title {
-    @apply text-4xl md:text-5xl lg:text-6xl font-serif my-8 max-w-[800px] mx-auto font-medium text-white;
+    @apply text-4xl sm:text-6xl font-serif my-8 max-w-screen-md mx-auto font-medium text-white text-balance;
   }
 
   .app-gradient {

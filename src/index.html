@@ -65,7 +65,7 @@
       </main>
   
       <!-- Acomodações -->
-      <section id="acomodacoes" class="container border-2 mt-16 grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-8">
+      <section id="acomodacoes" class="container py-16 grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-8">
   
         <div class="col-start-1 col-end-2 bg-[url('./img/padrao.svg')] bg-no-repeat bg-contain bg-left-bottom grid">
   
@@ -108,100 +108,103 @@
   
       </section>
     
-
-    <section class="bg-app-green-900 p-20 text-white">
+      <!-- Eventos -->
+    <section class="bg-app-green-900 py-12 sm:py-16 text-white" id="events">
       <div class="container">
-        <h3 class="subtitle text-center">Conecte-se com a natureza</h3>
-        <h2 class="title capitalize text-center">Cada som, cada momento, uma nova descoberta</h2>
+        <p class="subtitle text-center">Conecte-se com a natureza</p>
+        <h2 class="title capitalize text-center mb-8">Cada som, cada momento, uma nova descoberta</h2>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div class="p-8 bg-app-green-800 rounded-xl grid gap-4">
-            <h2 class="font-serif text-2xl text-app-green-300">Lua Nova</h2>
+        <div class="grid grid-cols-[repeat(3,minmax(300px,1fr))] overflow-x-auto gap-4 sm:gap-8 snap-x snap-mandatory *:snap-center px-4">
+          <div class="p-6 sm:p-8 bg-app-green-800 rounded-xl grid gap-4">
+            <h3 class="font-serif text-2xl text-app-green-300">Lua Nova</h3>
   
             <div>
               <span class="font-serif font-medium text-5xl">23</span>
               <p class="text-xl">Março 2049</p>
             </div>
   
-            <p>Melhor perído para observação astronômica. O céu estará claro e as estrelas visíveis.</p>
+            <p class="text-balance text-gray-300">Melhor perído para observação astronômica. O céu estará claro e as estrelas visíveis.</p>
   
-            <button class="btn justify-self-start">Reserve 23/03</button>
+            <a href="#contato" class="btn justify-self-start">Reserve 23/03</a>
           </div>
   
           <div class="p-8 bg-app-green-800 rounded-xl grid gap-4">
-            <h2 class="font-serif text-2xl text-app-green-300">Aurora Boreal</h2>
+            <h3 class="font-serif text-2xl text-app-green-300">Aurora Boreal</h3>
   
             <div>
               <span class="font-serif font-medium text-5xl">15</span>
               <p class="text-xl">Abril 2049</p>
             </div>
   
-            <p>Melhor período para observação da Aurora Boreal, o céu estará iluminado pelas estrelas.</p>
+            <p class="text-balance text-gray-300">Melhor período para observação da Aurora Boreal, o céu estará iluminado pelas estrelas.</p>
   
-            <button class="btn justify-self-start">Reserve 23/03</button>
+            <a href="#contato" class="btn justify-self-start">Reserve 23/03</a>
           </div>
   
           <div class="p-8 bg-app-green-800 rounded-xl grid gap-4">
-            <h2 class="font-serif text-2xl text-app-green-300">Chuva de Meteoros</h2>
+            <h3 class="font-serif text-2xl text-app-green-300">Chuva de Meteoros</h3>
   
             <div>
               <span class="font-serif font-medium text-5xl">18</span>
               <p class="text-xl">Agosto 2049</p>
             </div>
   
-            <p>Melhor período para observação da Aurora Boreal, o céu estará iluminado pelas estrelas.</p>
+            <p class="text-balance text-gray-300">Melhor período para observação da Aurora Boreal, o céu estará iluminado pelas estrelas.</p>
   
-            <button class="btn justify-self-start">Reserve 23/03</button>
+            <a href="#contato" class="btn justify-self-start">Reserve 23/03</a>
           </div>
         </div>
       </div>
 
     </section>
 
-    <section class="p-20 text-white">
-      <div class="container">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-          <div class="p-8 bg-app-green-900 rounded-xl">
-            <div class="grid gap-6">
-              <h3 class="subtitle">Experiências exclusivas</h3>
-              <h2 class="font-serif capitalize text-3xl md:text-4xl lg:text-5xl font-medium text-balance">Escolha a sua própria aventura</h2>
+    <!-- Experiencias -->
+    <section class="p-4 sm:p-16 text-white container">
+      <div class="grid lg:grid-cols-2 gap-8">
+        <div class="p-6 sm:p-8 bg-app-green-900 rounded-xl grid gap-8">
+          <h3 class="subtitle">Experiências exclusivas</h3>
+            <h2 class="font-serif capitalize text-3xl sm:text-4xl lg:text-5xl font-medium text-balance">Escolha a sua própria aventura</h2>
 
-              <ul class="grid gap-8 first:*:*:before:h-1 first:*:*:before:w-7 first:*:*:before:bg-app-green-200 first:*:*:before:rounded-xl first:*:*:flex first:*:*:items-center first:*:*:gap-4">
-                <li>
-                  <span class="text-xl">Observação noturna</span>
-                  <p class="text-gray-400 text-balance">Explore a vida selvagem em seu habitat natural sob as estrelas.</p>
-                </li>
+            <ul class="grid gap-8 first:*:*:before:h-0.5 first:*:*:before:w-6 first:*:*:before:bg-app-green-200 first:*:*:before:rounded-xl first:*:*:flex first:*:*:items-center first:*:*:gap-4 hover:first:*:*:before:w-10 hover:first:*:*:before:transition-[width] last:*:*:ml-10">
+              <li>
+                <h3 class="text-xl">Observação noturna</h3>
+                <p class="text-gray-400 text-balance">Explore a vida selvagem em seu habitat natural sob as estrelas.</p>
+              </li>
 
-                <li>
-                  <span class="text-xl">Vida Selvagem</span>
-                  <p class="text-gray-400">Observe a vida selvagem em seu habitat natural.</p>
-                </li>
+              <li>
+                <h3 class="text-xl">Vida Selvagem</h3>
+                <p class="text-gray-400">Observe a vida selvagem em seu habitat natural.</p>
+              </li>
 
-                <li>
-                  <span class="text-xl">Canoagem</span>
-                  <p class="text-gray-400 text-balance">Conquiste novos horizontes com nossa equipe especializada.</p>
-                </li>
-              </ul>
+              <li>
+                <h3 class="text-xl">Canoagem</h3>
+                <p class="text-gray-400 text-balance">Conquiste novos horizontes com nossa equipe especializada.</p>
+              </li>
+            </ul>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div class="overflow-hidden rounded-xl relative cursor-pointer group">
+            <img src="./img/canoagem.jpg" alt="Canoagem" class="size-full rounded-xl object-cover group-hover:scale-110 transition-transform">
+            <div class="bg-gradient-to-t from-app-green-950 absolute inset-0 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity">
+              <span class="text-white">Canoagem</span>
             </div>
           </div>
 
-          <div class="grid grid-cols-2 gap-4">
-            <div class="image-card">
-              <img src="./img/canoagem.jpg" alt="Canoagem">
-              <span>Canoagem</span>
-            </div>
-  
-            <div class="image-card col-start-2 row-start-1 row-end-3">
-              <img src="./img/observacao-noturna.jpg" alt="Observação noturna" class="h-full object-cover">
+          <div class="overflow-hidden rounded-xl relative cursor-pointer group col-start-2 row-span-2">
+            <img src="./img/observacao-noturna.jpg" alt="Observação noturna" class="size-full rounded-xl object-cover group-hover:scale-110 transition-transform">
+            <div class="bg-gradient-to-t from-app-green-950 absolute inset-0 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity">
               <span>Observação noturna</span>
             </div>
+          </div>
 
-            <div class="image-card">
-              <img src="./img/vida-selvagem.jpg" alt="Vida selvagem">
+          <div class="overflow-hidden rounded-xl relative cursor-pointer group">
+            <img src="./img/vida-selvagem.jpg" alt="Vida selvagem" class="size-full rounded-xl object-cover group-hover:scale-110 transition-transforml">
+            <div class="bg-gradient-to-t from-app-green-950 absolute inset-0 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity">
               <span>Vida selvagem</span>
             </div>
-  
           </div>
+
         </div>
       </div>
     </section>
