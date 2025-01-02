@@ -4,7 +4,7 @@
 
 @layer components {
   .btn { 
-    @apply text-black bg-gradient-to-b from-app-green-200 to-app-green-400 hover:from-lime-200 hover:to-lime-500 py-2 px-4 rounded-full flex gap-2 items-center border border-app-green-200;
+    @apply text-black bg-gradient-to-b from-app-green-200 to-app-green-400 hover:from-lime-200 hover:to-lime-700 py-2 px-4 rounded-full flex gap-2 items-center border border-app-green-200;
   }
 
   .image-card {
@@ -17,7 +17,7 @@
   }
 
   .title {
-    @apply text-6xl font-serif my-8 max-w-[800px] mx-auto font-medium text-white;
+    @apply text-4xl md:text-5xl lg:text-6xl font-serif my-8 max-w-[800px] mx-auto font-medium text-white;
   }
 
   .app-gradient {
@@ -25,10 +25,14 @@
   }
 
   .card-info {
-    @apply grid gap-6 bg-app-green-700 p-8 rounded-xl hover:-translate-y-2 transition;
+    @apply grid gap-6 bg-app-green-900 p-8 rounded-xl hover:-translate-y-2 transition;
   }
 
   input, textarea {
-    @apply w-full py-2 rounded-md px-2 focus:outline-none focus:ring-2 ring-app-green-400 bg-app-green-600 text-white mt-1;
+    @apply w-full py-2 rounded-md px-2 focus:outline-none focus:ring-2 ring-app-green-400 bg-app-green-800 text-white mt-1;
+  }
+
+  .badge {
+    @apply text-white py-2 px-4 rounded-full bg-app-green-950/60 uppercase text-sm/none tracking-tight;
   }
 }

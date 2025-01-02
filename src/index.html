@@ -4,109 +4,118 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Forest</title>
+    <link rel="icon" href="/favicon.png" type="image/png">
     <link rel="stylesheet" href="./output.css" />
   </head>
-  <body class="">
-
-    <div class="bg-app-green-600 px-8 pt-4 pb-12">
-
-      <div class="mx-auto container">
-        <header>
-          <section class="flex gap-1 *:bg-black/20 *:px-4 *:py-2 text-app-green-300 mb-8">
-            <div class="rounded-l-md before:size-2 before:bg-apptext-app-green-300 before:block before:rounded-full relative before:absolute flex items-center before:-left-1 before:ring-1 before:ring-[#ACEF75]">Domingo</div>
-            <div>26º</div>
-            <div class="rounded-r-md">🌤️</div>
-          </section>
-          <div class="container flex justify-between">
-            <img src="./img/forest.svg" alt="Forest logo" />
-    
-            <ul
-              class="flex gap-6 text-white text-lg tracking-wider hover:*:underline *:underline-offset-8 *:decoration-2"
-            >
-              <li><a href="#">Acomodações</a></li>
-              <li><a href="#">Eventos</a></li>
-              <li><a href="#">Experiências</a></li>
-              <li><a href="#">Contato</a></li>
-            </ul>
+  <body class="font-sans bg-app-green-800">
+      <div class="container mt-4 flex justify-center md:justify-start">
+        <div class="inline-flex items-center bg-app-green-900 rounded-md">
+          <span class="size-2 bg-app-green-300 block rounded-full relative -left-1"></span>
+          <div class="flex text-app-green-300 divide-x-2 divide-app-green-800 *:px-4 *:py-2">
+            <div class="capitalize" id="day">Domingo</div>
+            <div id="temperature">26º</div>
+            <div id="weather">🌤️</div>
           </div>
-        </header>
-    
-        <div class=" relative h-[594px] mt-8 flex justify-center">
-          <video autoplay loop muted class="rounded-xl w-full object-cover">
+        </div>
+      </div>
+      <header class="container flex justify-between gap-8 py-8 items-center">
+        <a href="#">
+          <img src="./img/forest.svg" alt="Forest logo" />
+        </a>
+
+        <nav>
+          <ul
+            class="flex flex-wrap gap-8 text-white text-xl hover:*:underline *:underline-offset-8"
+          >
+            <li><a href="#acomodacoes">Acomodações</a></li>
+            <li><a href="#eventos">Eventos</a></li>
+            <li><a href="#experiencias">Experiências</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="container">
+        <div class=" relative h-[594px] mx-4 sm:mx-8 mt-8 flex justify-center rounded-2xl overflow-hidden">
+          <video autoplay loop muted class="w-full object-cover">
             <source src="./img/video_sol.mp4"></source>
           </video>
     
-          <div class="absolute inset-0 flex flex-col justify-center gap-8 p-8">
-            <div class="text-white bg-black py-3 px-4 rounded-full self-start flex gap-4 items-center">
+          <div class="absolute inset-0 flex flex-col justify-center gap-8 p-8 text-white bg-gradient-to-t from-app-green-950/80">
+            <div class="bg-app-green-950/60 rounded-xl self-start flex flex-col items-start p-4 gap-2 sm:flex-row sm:bg-black sm:py-1 sm:pr-1 sm:gap-8 sm:items-center sm:rounded-full">
               vagas para dezembro abertas
-              <button class="btn">Reserva Hoje <img src="./img/seta.svg" alt=""> </button>
+              <a class="btn cursor-pointer">Reserva Hoje <img src="./img/seta.svg" alt=""> </a>
             </div>
-            <h1 class="text-white font-serif text-5xl font-semibold max-w-xl">Venha Experimentar a Vida na Floresta</h1>
+            <h1 class="font-serif text-4xl sm:text-5xl font-semibold max-screen-sm text-balance">Venha Experimentar a Vida na Floresta</h1>
                 
-            <p class="absolute bottom-8 text-white text-sm">Melhores locais para visitar <span class="underline underline-offset-4 decoration-2">2049</span></p>
+            <p class="absolute bottom-24 md:bottom-8 text-sm">
+              Melhores locais para visitar <a href="./" class="underline underline-offset-4 decoration-2 hover:no-underline">2049</a>
+            </p>
     
-            <div class="text-white absolute right-8 bottom-8 grid gap-2">
-              <span class="text-sm uppercase">recomendado por</span>
+            <div class="absolute md:right-8 bottom-8 grid gap-2 text-sm">
+              <span class="uppercase mb-2">recomendado por</span>
     
-              <div class="flex gap-4">
-                <img class="w-32" src="./img/parceiros/wildbeast.svg" alt="">
+              <div class="flex gap-4 items-center">
+                <img class="w-28" src="./img/parceiros/wildbeast.svg" alt="">
                 | <span>Revista Nacional</span>
               </div>        
             </div>
           </div>
         </div>
+      </main>
+  
+      <!-- Acomodações -->
+      <section id="acomodacoes" class="container border-2 mt-16 grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-8">
+  
+        <div class="col-start-1 col-end-2 bg-[url('./img/padrao.svg')] bg-no-repeat bg-contain bg-left-bottom grid">
+  
+          <div class="content-end mx-auto lg:mx-0 grid gap-8">
+            <h2 class="font-serif text-4xl lg:text-5xl font-medium text-white">Refúgio Natural</h2>
     
-        <section class="mt-8 grid grid-cols-[2fr_3fr] gap-8 text-white">
-    
-          <div class="col-start-1 col-end-2 bg-[url('./img/padrao.svg')] bg-no-repeat bg-contain bg-bottom grid">
-    
-            <div class="self-end">
-              <h2 class="font-serif text-6xl font-medium mb-8">Refúgio Natural</h2>
-      
-              <ul class="grid gap-2 text-lg tracking-wider  *:before:h-1 *:before:w-8 *:before:bg-app-green-200 *:before:inline-block *:before:rounded-md *:before:shadow-sm *:before:shadow-app-green-300 *:flex *:items-center *:gap-3"
-              
-              >
-                <li> Experimente a natureza de perto</li>
-                <li >Conecte-se com a natureza</li>
-                <li>Desconecte-se do digital</li>
-                <li>Observe a vida selvagem</li>
-                <li>Escolha a sua cabine preferida</li>
-              </ul>
-            </div>
+            <ul class="
+            text-gray-200 grid gap-4 text-lg sm:text-xl tracking-wider  *:before:h-0.5 *:before:w-6 *:before:bg-app-green-200 *:before:inline-block *:before:rounded-md *:before:shadow-sm *:before:shadow-app-green-300 *:flex *:items-center *:gap-4"
+            
+            >
+              <li> Experimente a natureza de perto</li>
+              <li>Conecte-se com a natureza</li>
+              <li>Desconecte-se do digital</li>
+              <li>Observe a vida selvagem</li>
+              <li>Escolha a sua cabine preferida</li>
+            </ul>
           </div>
-    
-    
-            <div class="grid grid-cols-[2fr_1fr] gap-8">
-              <div class="col-span-full grid *:col-start-1 *:row-start-1">
-                <img src="./img/casa1.jpg" class="w-full h-52 object-cover rounded-xl" alt="">
-                <span class="text-white justify-self-end self-start py-1 px-4 rounded-full m-2 bg-black/30 uppercase text-sm tracking-tight">Ruby</span>
-              </div>
-      
-              
-              
-              <div class="grid *:col-start-1 *:row-start-2">
-                <img src="./img/casa2.jpg" alt="Esmerald" class="col-start-2 rounded-xl">
-                <span class="text-white justify-self-end self-start py-1 px-4 rounded-full m-2 bg-black/30 uppercase text-sm tracking-tight">Esmerald</span>
-              </div>
-    
-              <div class="grid *:col-start-2 *:row-start-1">
-                <img src="./img/casa3.jpg" alt="Esmerald" class="rounded-xl object-cover h-full">
-                <span class="text-white justify-self-end self-start py-1 px-4 rounded-full m-2 bg-black/30 uppercase text-sm tracking-tight">Saphire</span>
-              </div>
-      
+        </div>
+  
+  
+          <div class="grid grid-cols-[2fr_1fr] gap-4 sm:gap-8">
+            <div class="col-span-full grid *:col-start-1 *:row-start-1">
+              <img src="./img/casa1.jpg" class="w-full h-52 object-cover rounded-xl" alt="">
+              <span class="badge m-2 justify-self-end self-start">Ruby</span>
             </div>
     
-        </section>
-      </div>
-    </div>
+            
+            
+            <div class="grid *:col-start-1 *:row-start-2">
+              <img src="./img/casa2.jpg" alt="Esmerald" class="col-start-2 rounded-xl">
+              <span class="badge m-2 justify-self-end self-start">Esmerald</span>
+            </div>
+  
+            <div class="grid *:col-start-2 *:row-start-1">
+              <img src="./img/casa3.jpg" alt="Esmerald" class="rounded-xl object-cover size-full">
+              <span class="badge m-2 justify-self-end self-start">Saphire</span>
+            </div>
+    
+          </div>
+  
+      </section>
+    
 
-    <section class="bg-app-green-700 p-20 text-white">
-      <div class="mx-auto container">
+    <section class="bg-app-green-900 p-20 text-white">
+      <div class="container">
         <h3 class="subtitle text-center">Conecte-se com a natureza</h3>
-        <h2 class="title capitalize">Cada som, cada momento, uma nova descoberta</h2>
+        <h2 class="title capitalize text-center">Cada som, cada momento, uma nova descoberta</h2>
 
-        <div class="grid grid-cols-3 gap-8">
-          <div class="p-8 bg-app-green-600 rounded-xl grid gap-4">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div class="p-8 bg-app-green-800 rounded-xl grid gap-4">
             <h2 class="font-serif text-2xl text-app-green-300">Lua Nova</h2>
   
             <div>
@@ -119,7 +128,7 @@
             <button class="btn justify-self-start">Reserve 23/03</button>
           </div>
   
-          <div class="p-8 bg-app-green-600 rounded-xl grid gap-4">
+          <div class="p-8 bg-app-green-800 rounded-xl grid gap-4">
             <h2 class="font-serif text-2xl text-app-green-300">Aurora Boreal</h2>
   
             <div>
@@ -132,7 +141,7 @@
             <button class="btn justify-self-start">Reserve 23/03</button>
           </div>
   
-          <div class="p-8 bg-app-green-600 rounded-xl grid gap-4">
+          <div class="p-8 bg-app-green-800 rounded-xl grid gap-4">
             <h2 class="font-serif text-2xl text-app-green-300">Chuva de Meteoros</h2>
   
             <div>
@@ -149,18 +158,18 @@
 
     </section>
 
-    <section class="bg-app-green-600 p-20 text-white">
-      <div class="mx-auto container">
-        <div class="grid grid-cols-4 gap-4">
-          <div class="p-8 bg-app-green-700 rounded-xl col-start-1 col-end-3 row-start-1 row-end-3">
+    <section class="p-20 text-white">
+      <div class="container">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <div class="p-8 bg-app-green-900 rounded-xl">
             <div class="grid gap-6">
               <h3 class="subtitle">Experiências exclusivas</h3>
-              <h2 class="font-serif capitalize text-5xl font-medium w-96">Escolha a sua própria aventura</h2>
+              <h2 class="font-serif capitalize text-3xl md:text-4xl lg:text-5xl font-medium text-balance">Escolha a sua própria aventura</h2>
 
               <ul class="grid gap-8 first:*:*:before:h-1 first:*:*:before:w-7 first:*:*:before:bg-app-green-200 first:*:*:before:rounded-xl first:*:*:flex first:*:*:items-center first:*:*:gap-4">
                 <li>
                   <span class="text-xl">Observação noturna</span>
-                  <p class="text-gray-400">Explore a vida selvagem em seu habitat natural sob as estrelas.</p>
+                  <p class="text-gray-400 text-balance">Explore a vida selvagem em seu habitat natural sob as estrelas.</p>
                 </li>
 
                 <li>
@@ -170,38 +179,41 @@
 
                 <li>
                   <span class="text-xl">Canoagem</span>
-                  <p class="text-gray-400">Conquiste novos horizontes com nossa equipe especializada.</p>
+                  <p class="text-gray-400 text-balance">Conquiste novos horizontes com nossa equipe especializada.</p>
                 </li>
               </ul>
             </div>
           </div>
 
-          <div class="image-card">
-            <img src="./img/canoagem.jpg" alt="Canoagem">
-            <span>Canoagem</span>
-          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="image-card">
+              <img src="./img/canoagem.jpg" alt="Canoagem">
+              <span>Canoagem</span>
+            </div>
+  
+            <div class="image-card col-start-2 row-start-1 row-end-3">
+              <img src="./img/observacao-noturna.jpg" alt="Observação noturna" class="h-full object-cover">
+              <span>Observação noturna</span>
+            </div>
 
-          <div class="image-card">
-            <img src="./img/vida-selvagem.jpg" alt="Vida selvagem">
-            <span>Vida selvagem</span>
-          </div>
-
-          <div class="image-card col-start-4 row-start-1 row-end-3">
-            <img src="./img/observacao-noturna.jpg" alt="Observação noturna" class="h-full object-cover">
-            <span>Observação noturna</span>
+            <div class="image-card">
+              <img src="./img/vida-selvagem.jpg" alt="Vida selvagem">
+              <span>Vida selvagem</span>
+            </div>
+  
           </div>
         </div>
       </div>
     </section>
 
 
-    <section class="bg-app-green-600 p-8">
-      <div class="container mx-auto grid gap-8">
+    <section class="p-8">
+      <div class="container grid gap-8">
         <h3 class="subtitle text-center">Ciclo natural</h3>
 
         <h2 class="title text-center">Ritmo da Floresta</h2>
 
-        <div class="grid grid-cols-3 gap-8 items-start">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
           <div class="card-info">
             <img src="./img/manha.svg" alt="ícone Amanhecer" class="app-gradient rounded-full p-2 border border-app-green-200">
 
@@ -230,7 +242,7 @@
           </div>
         </div>
 
-        <div class="grid grid-cols-2">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div class="grid gap-8 max-w-96">
             <h2 class="font-serif text-app-green-300 text-4xl font-medium">Nossos Contatos</h2>
 
@@ -252,35 +264,35 @@
             </div>
           </div>
 
-          <form action="" class="grid gap-2 p-8 bg-app-green-700 rounded-xl">
+          <form class="grid gap-2 p-8 bg-app-green-900 rounded-xl">
             <div>
               <label for="name" class="text-white block">Nome</label>
-              <input type="text" id="name" name="name">
+              <input type="text" id="name" name="name" required>
             </div>
 
             <div class="grid grid-cols-2 gap-2">
               <div class="">
                 <label for="email" class="text-white block">Email</label>
-                <input type="email" id="email" name="email" class="w-full">
+                <input type="email" id="email" name="email" class="w-full" required>
               </div>
 
               <div>
                 <label for="phone" class="text-white block">Telefone</label>
-                <input type="phone" id="phone" name="phone" class="w-full">
+                <input type="phone" id="phone" name="phone" class="w-full" required>
               </div>
 
             </div>
 
             <div class="self-start">
               <label for="message" class="text-white block">Mensagem</label>
-              <textarea id="message" name="message" class="w-full"></textarea>
+              <textarea id="message" name="message" class="w-full" required></textarea>
             </div>
 
-            <button class="btn justify-self-start self-start">Enviar Email</button>
+            <button class="btn justify-self-start self-start" type="submit">Enviar Email</button>
           </form>
         </div>
 
-        <div class="border-y-2 border-spacing-4 py-12 border-app-green-700">
+        <div class="border-y-2 border-spacing-4 py-12 border-app-green-900">
           <div class="flex gap-16 justify-center flex-wrap *:w-32">
             <img src="./img/parceiros/caravan.svg" alt="Caravan">
 
@@ -294,7 +306,7 @@
           </div>
         </div>
 
-        <div class="flex justify-between flex-wrap gap-8 bg-app-green-700 p-8 rounded-xl">
+        <div class="flex justify-between flex-wrap gap-8 bg-app-green-900 p-8 rounded-xl">
           <div class="text-white grid grid-cols-2 gap-16">
             <div class="grid gap-6">
               <h4 class="font-serif text-xl font-semibold">Endereço</h4>
