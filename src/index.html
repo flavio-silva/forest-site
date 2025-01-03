@@ -18,21 +18,30 @@
           </div>
         </div>
       </div>
-      <header class="container flex justify-between gap-8 py-8 items-center">
+      <header class="container flex justify-between py-8 items-center">
         <a href="#">
           <img src="./img/forest.svg" alt="Forest logo" />
         </a>
 
-        <nav>
+        <nav id="mobile-menu" class="hidden items-center lg:block z-40 max-lg:fixed max-lg:w-full max-lg:inset-0">
+          <div class="max-lg:fixed lg:hidden inset-0 bg-app-green-950/40 backdrop-blur-md"></div>
           <ul
-            class="flex flex-wrap gap-8 text-white text-xl hover:*:underline *:underline-offset-8"
+            class="text-white text-2xl max-lg:divide-y-2 max-lg:divide-white/10 max-lg:z-50 max-lg:absolute max-lg:p-8 max-lg:w-full lg:text-xl lg:flex lg:flex-wrap lg:gap-8  "
           >
-            <li><a href="#acomodacoes">Acomodações</a></li>
-            <li><a href="#eventos">Eventos</a></li>
-            <li><a href="#experiencias">Experiências</a></li>
-            <li><a href="#contato">Contato</a></li>
+            <li><a class="p-4 block max-lg:hover:bg-white/10 lg:hover:underline lg:underline-offset-8" href="#acomodacoes">Acomodações</a></li>
+            <li><a class="p-4 block max-lg:hover:bg-white/10 lg:hover:underline lg:underline-offset-8" href="#eventos">Eventos</a></li>
+            <li><a class="p-4 block max-lg:hover:bg-white/10 lg:hover:underline lg:underline-offset-8" href="#experiencias">Experiências</a></li>
+            <li><a class="p-4 block max-lg:hover:bg-white/10 lg:hover:underline lg:underline-offset-8" href="#contato">Contato</a></li>
           </ul>
         </nav>
+        <button class="btn lg:hidden" id="mobile-button">
+          Menu
+          <span class="h-3 w-4 *:h-0.5 *:rounded-md *:bg-app-green-800 flex flex-col justify-between">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
       </header>
 
       <main class="container">
@@ -109,7 +118,7 @@
       </section>
     
       <!-- Eventos -->
-    <section class="bg-app-green-900 py-12 sm:py-16 text-white" id="events">
+    <section class="bg-app-green-900 py-12 sm:py-16 text-white" id="eventos">
       <div class="container">
         <p class="subtitle text-center">Conecte-se com a natureza</p>
         <h2 class="title capitalize text-center mb-8">Cada som, cada momento, uma nova descoberta</h2>
@@ -159,7 +168,7 @@
     </section>
 
     <!-- Experiencias -->
-    <section class="p-4 sm:p-16 text-white container">
+    <section id="experiencias" class="p-4 sm:p-16 text-white container">
       <div class="grid lg:grid-cols-2 gap-8">
         <div class="p-6 sm:p-8 bg-app-green-900 rounded-xl grid gap-8">
           <h3 class="subtitle">Experiências exclusivas</h3>
@@ -209,146 +218,165 @@
       </div>
     </section>
 
+<!-- Ciclo natural -->
 
-    <section class="p-8">
-      <div class="container grid gap-8">
-        <h3 class="subtitle text-center">Ciclo natural</h3>
+    <section class="container grid gap-8 p-8 sm:p-16 mb-12 sm:mb-16 bg-[url('img/padrao.svg')] bg-no-repeat bg-contain bg-center">
+      <h3 class="subtitle text-center">Ciclo natural</h3>
 
-        <h2 class="title text-center">Ritmo da Floresta</h2>
+      <h2 class="title text-center">Ritmo da Floresta</h2>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-          <div class="card-info">
-            <img src="./img/manha.svg" alt="ícone Amanhecer" class="app-gradient rounded-full p-2 border border-app-green-200">
+      <div class="flex flex-col md:flex-row gap-4 md:gap-8">
+        <div class="grid gap-4 flex-1 bg-app-green-900 p-6 sm:p-8 rounded-xl md:hover:-translate-y-2 transition">
+          <img src="./img/manha.svg" class="app-gradient rounded-full p-2 border border-app-green-200 size-10">
 
-            <h3 class="text-white font-serif text-2xl font-bold">Amanhecer</h3>
-            <p class="text-gray-400">Desperte com o canto dos pássaros e participe das nossas caminhadas ao ar livre.</p>
+          <h3 class="text-white font-serif text-2xl font-bold">Amanhecer</h3>
+          <p class="text-gray-400">Desperte com o canto dos pássaros e participe das nossas caminhadas ao ar livre.</p>
 
-            <span class="text-app-green-300 tracking-wide">05:40 - 07:00</span>
-          </div>
-        
-          <div class="card-info mt-10">
-            <img src="./img/dia.svg" alt="ícone Meio dia" class="app-gradient rounded-full p-2 border border-app-green-200">
+          <span class="text-app-green-300 tracking-wide">05:40 - 07:00</span>
+        </div>
+      
+        <div class="grid gap-4 flex-1 bg-app-green-900 p-6 md:p-8 rounded-xl md:hover:translate-y-10 transition md:translate-y-12">
+          <img src="./img/dia.svg" alt="ícone Meio dia" class="app-gradient rounded-full p-2 border border-app-green-200 size-10">
 
-            <h3 class="text-white font-serif text-2xl font-bold">Meio-dia</h3>
-            <p class="text-gray-400">Explore nossas trilhas sombreadas e desfrute de um piquenique gourmet na natureza.</p>
+          <h3 class="text-white font-serif text-2xl font-bold">Meio-dia</h3>
+          <p class="text-gray-400">Explore nossas trilhas sombreadas e desfrute de um piquenique gourmet na natureza.</p>
 
-            <span class="text-app-green-300 tracking-wide">12:00 - 14:00</span>
-          </div>
+          <span class="text-app-green-300 tracking-wide">12:00 - 14:00</span>
+        </div>
 
-          <div class="card-info">
-            <img src="./img/noite.svg" alt="ícone Meio dia" class="app-gradient rounded-full p-2 border border-app-green-200">
+        <div class="grid gap-4 flex-1 bg-app-green-900 p-6 md:p-8 rounded-xl md:hover:-translate-y-2 transition">
+          <img src="./img/noite.svg" alt="ícone Meio dia" class="app-gradient rounded-full p-2 border border-app-green-200 size-10">
 
-            <h3 class="text-white font-serif text-2xl font-bold">Anoitecer</h3>
-            <p class="text-gray-400">Termine seu dia com nossa sessão de observação de estrelas.</p>
+          <h3 class="text-white font-serif text-2xl font-bold">Anoitecer</h3>
+          <p class="text-gray-400">Termine seu dia com nossa sessão de observação de estrelas.</p>
 
-            <span class="text-app-green-300 tracking-wide">19:00 - 21:00</span>
+          <span class="text-app-green-300 tracking-wide">19:00 - 21:00</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="container">
+      <div class="grid lg:grid-cols-2 gap-8 mx-4">
+        <div class="grid gap-8 max-w-96">
+          <h1 class="font-serif text-app-green-300 text-4xl font-medium">Nossos Contatos</h1>
+
+          <p class=" text-gray-200 text-balance">Tem interesse em passar uma temporada na Forest? Entre em contato com a gente por telefone ou email.</p>
+
+          <div class="grid gap-4">
+            <div class="flex flex-col gap-3">
+              <h2 class="font-serif text-app-green-300 text-2xl font-medium before:h-0.5 before:w-6 before:block before:bg-app-green-300 before:rounded-full before:mb-2">Base</h2>
+              <span class="text-gray-300">Rua da Mata, 123 - Floresta Nacional - RJ</span>
+            </div>
+  
+            <div class="flex flex-col gap-3">
+              <h2 class="font-serif text-app-green-300 text-2xl font-medium before:h-0.5 before:w-6 before:block before:bg-app-green-300 before:rounded-full before:mb-2">Email</h2>
+              <span class="text-gray-300">contato@forest.com</span>
+            </div>
+  
+            <div class="flex flex-col gap-3">
+              <h2 class="font-serif text-app-green-300 text-2xl font-medium before:h-0.5 before:w-6 before:block before:bg-app-green-300 before:rounded-full before:mb-2">Telefone</h2>
+              <span class="text-gray-300">21 99999-9999</span>
+            </div>
           </div>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div class="grid gap-8 max-w-96">
-            <h2 class="font-serif text-app-green-300 text-4xl font-medium">Nossos Contatos</h2>
-
-            <p class="text-white">Tem interesse em passar uma temporada na Forest? Entre em contato com a gente por telefone ou email.</p>
-
-            <div class="flex flex-col gap-3">
-              <span class="font-serif text-app-green-300 text-2xl font-medium before:h-1 before:w-7 before:block before:bg-app-green-300 before:rounded-full before:mb-2">Base</span>
-              <span class="text-white">Rua da Mata, 123 - Floresta Nacional - RJ</span>
-            </div>
-
-            <div class="flex flex-col gap-3">
-              <span class="font-serif text-app-green-300 text-2xl font-medium before:h-1 before:w-7 before:block before:bg-app-green-300 before:rounded-full before:mb-2">Email</span>
-              <span class="text-white">contato@forest.com</span>
-            </div>
-
-            <div class="flex flex-col gap-3">
-              <span class="font-serif text-app-green-300 text-2xl font-medium before:h-1 before:w-7 before:block before:bg-app-green-300 before:rounded-full before:mb-2">Telefone</span>
-              <span class="text-white">21 99999-9999</span>
-            </div>
+        <form class="grid gap-4 p-4 lg:p-8 bg-app-green-900 rounded-xl shadow-2xl">
+          <div>
+            <label for="name" class="text-white block">Nome</label>
+            <input type="text" id="name" name="name" required>
           </div>
 
-          <form class="grid gap-2 p-8 bg-app-green-900 rounded-xl">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="">
+              <label for="email" class="text-white block">Email</label>
+              <input type="email" id="email" name="email" class="w-full" required>
+            </div>
+
             <div>
-              <label for="name" class="text-white block">Nome</label>
-              <input type="text" id="name" name="name" required>
+              <label for="phone" class="text-white block">Telefone</label>
+              <input type="phone" id="phone" name="phone" class="w-full" required placeholder="(11) 9-9999-9999">
             </div>
 
-            <div class="grid grid-cols-2 gap-2">
-              <div class="">
-                <label for="email" class="text-white block">Email</label>
-                <input type="email" id="email" name="email" class="w-full" required>
-              </div>
-
-              <div>
-                <label for="phone" class="text-white block">Telefone</label>
-                <input type="phone" id="phone" name="phone" class="w-full" required>
-              </div>
-
-            </div>
-
-            <div class="self-start">
-              <label for="message" class="text-white block">Mensagem</label>
-              <textarea id="message" name="message" class="w-full" required></textarea>
-            </div>
-
-            <button class="btn justify-self-start self-start" type="submit">Enviar Email</button>
-          </form>
-        </div>
-
-        <div class="border-y-2 border-spacing-4 py-12 border-app-green-900">
-          <div class="flex gap-16 justify-center flex-wrap *:w-32">
-            <img src="./img/parceiros/caravan.svg" alt="Caravan">
-
-            <img src="./img/parceiros/dogs.svg" alt="Dogs">
-
-            <img src="./img/parceiros/wildbeast.svg" alt="Wildbeast">
-
-            <img src="./img/parceiros/lescone.svg" alt="Lescone">
-
-            <img src="./img/parceiros/surfbot.svg" alt="Surfbot">
           </div>
-        </div>
 
-        <div class="flex justify-between flex-wrap gap-8 bg-app-green-900 p-8 rounded-xl">
-          <div class="text-white grid grid-cols-2 gap-16">
-            <div class="grid gap-6">
-              <h4 class="font-serif text-xl font-semibold">Endereço</h4>
-  
-              <ul class="text-gray-400">
-                <li>Rua da Mata, 123</li>
-                <li> Floresta Nacional</li>
-                <li>Rio de Janeiro, RJ</li>
-              </ul>
-            </div>
-  
-            <div class="grid gap-6">
-              <h4 class="font-serif text-xl font-semibold">Contato</h4>
-  
-              <ul class="text-gray-400">
-                <li>contato@forest.com</li>
-                <li>+55 21 9999-9999</li>
-              </ul>
-            </div>
+          <div class="self-start">
+            <label for="message" class="text-white block">Mensagem</label>
+            <textarea id="message" name="message" class="w-full resize-none" required rows="5"></textarea>
+          </div>
+
+          <button class="btn justify-self-start self-start" type="submit">Enviar Email</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Parceiros -->
+    <section class="container mt-16">
+      
+      <ul class="flex flex-col sm:flex-row items-center py-4 sm:py-8 max-sm:divide-y-2 divide-app-green-900 justify-center flex-wrap *:*:max-h-8 *:p-4 sm:gap-8 sm:border-y-2 border-app-green-900">
+        <ul><img src="./img/parceiros/caravan.svg" alt="Caravan"></ul>
+
+        <ul><img src="./img/parceiros/dogs.svg" alt="Dogs"></ul>
+
+        <ul><img src="./img/parceiros/wildbeast.svg" alt="Wildbeast"></ul>
+
+        <ul><img src="./img/parceiros/lescone.svg" alt="Lescone"></ul>
+
+        <ul><img src="./img/parceiros/surfbot.svg" alt="Surfbot"></ul>
+      </ul>
+    </section>
+
+    <footer class="container my-12 sm:my-16 grid gap-8 mx-4">
+      <div class="grid lg:grid-cols-2 gap-8 bg-app-green-900 p-6 sm:p-8 rounded-2xl">
+        <div class="text-white flex gap-12 max-sm:flex-col max-sm:gap-4">
+          <div class="grid gap-4">
+            <h3 class="font-serif text-xl font-semibold">Endereço</h3>
+
+            <ul class="text-gray-400">
+              <li>Rua da Mata, 123</li>
+              <li> Floresta Nacional</li>
+              <li>Rio de Janeiro, RJ</li>
+            </ul>
           </div>
 
           <div class="grid gap-4">
-              <h4 class="font-serif font-medium text-5xl text-white">Forest</h4>
-              <p class="text-gray-400">Conect-se com a natureza</p>
-          </div>
-      </div>
+            <h3 class="font-serif text-xl font-semibold">Contato</h3>
 
-      <div class="flex justify-between text-gray-400 text-sm">
+            <ul class="text-gray-400">
+              <li>contato@forest.com</li>
+              <li>+55 21 9999-9999</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="grid gap-4 lg:justify-self-end">
+            <img src="./img/forest.svg" alt="Forest">
+            <p class="text-gray-400">Conect-se com a natureza</p>
+        </div>
+    </div>
+
+      <div class="flex justify-between text-gray-400 text-sm items-center gap-8 max-sm:flex-col-reverse ">
         <p class="">© 2024 Forest. Todos os direitos reservados.</p>
-        <ul class="flex gap-8 hover:*:text-app-green-300">
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">Linkedin</a></li>
-          <li><a href="#">Facebook</a></li>
+        <ul class="flex flex-wrap gap-8 hover:*:text-app-green-300">
+          <li><a href="#" class="hover:text-app-green-300">Instagram</a></li>
+          <li><a href="#" class="hover:text-app-green-300">Linkedin</a></li>
+          <li><a href="#" class="hover:text-app-green-300">Facebook</a></li>
         </ul>
       </div>
+    </footer>
 
+    <script>
+      const menu = document.querySelector('#mobile-menu');
+      document.querySelector('#mobile-button').addEventListener('click', (event) => {
+        menu.classList.toggle('hidden');
+        menu.classList.toggle('flex');
+      })
 
-      </div>
-    </section>
+      document.querySelector('#mobile-menu').addEventListener('click', (event) => {
+        menu.classList.add('hidden');
+        menu.classList.remove('flex');
+      })
+    </script>
   </body>
 </html>
 

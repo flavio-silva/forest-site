@@ -20,12 +20,8 @@
     @apply bg-gradient-to-b from-app-green-200 to-app-green-400;
   }
 
-  .card-info {
-    @apply grid gap-6 bg-app-green-900 p-8 rounded-xl hover:-translate-y-2 transition;
-  }
-
   input, textarea {
-    @apply w-full py-2 rounded-md px-2 focus:outline-none focus:ring-2 ring-app-green-400 bg-app-green-800 text-white mt-1;
+    @apply w-full rounded-md p-2 focus:outline-none focus:ring-2 ring-app-green-400 bg-app-green-800 text-white mt-1 border-2 border-app-green-800 focus:border-app-green-900 placeholder:text-app-green-900;
   }
 
   .badge {
